@@ -2,14 +2,19 @@
   <cal-display [currentValue]="displayValue" />
 </div>
 <div>
-  <cal-button [buttonNumber]="1" />
-  <cal-button [buttonNumber]="2" />
-  <cal-button [buttonNumber]="3" />
-  <cal-button [buttonNumber]="4" />
-  <cal-button [buttonNumber]="5" />
-  <cal-button [buttonNumber]="6" />
-  <cal-button [buttonNumber]="7" />
-  <cal-button [buttonNumber]="8" />
-  <cal-button [buttonNumber]="9" />
-  <cal-button [buttonNumber]="0" />
+  <cal-button [buttonValue]="'C'" (pressed)="deleteOne()" />
+
+  <cal-button [buttonValue]="1" (pressed)="appendDisplay($event)" />
+  <cal-button [buttonValue]="2" (pressed)="appendDisplay($event)" />
+  <cal-button [buttonValue]="3" (pressed)="appendDisplay($event)" />
+
+  <cal-button [buttonValue]="4" (pressed)="appendDisplay($event)" />
+  <cal-button [buttonValue]="5" (pressed)="appendDisplay($event)" />
+  <cal-button [buttonValue]="6" (pressed)="appendDisplay($event)" />
+
+  <cal-button [buttonValue]="7" (pressed)="appendDisplay($event)" />
+  <cal-button [buttonValue]="8" (pressed)="appendDisplay($event)" />
+  <cal-button [buttonValue]="9" (pressed)="appendDisplay($event)" />
+
+  <cal-button [buttonValue]="0" (pressed)="appendDisplay($event)" />
 </div>

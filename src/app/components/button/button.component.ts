@@ -8,12 +8,11 @@ import { Component, input, output } from '@angular/core';
   styleUrl: './button.component.scss',
 })
 export class ButtonComponent {
-  buttonNumber = input.required<number>();
+  buttonValue = input.required<number | string>();
 
-  pressed = output<number>();
+  pressed = output<number | string>();
 
   onClick() {
-    this.pressed.emit(this.buttonNumber());
-    console.log('Button pressed:', this.buttonNumber());
+    this.pressed.emit(this.buttonValue());
   }
 }

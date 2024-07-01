@@ -11,4 +11,12 @@ import { ButtonComponent } from '../../components/button/button.component';
 })
 export class MainPageComponent {
   displayValue = 0;
+
+  appendDisplay(number: number | string) {
+    this.displayValue = Number(`${this.displayValue}${number}`);
+  }
+
+  deleteOne() {
+    this.displayValue = Math.floor(this.displayValue / 10);
+  }
 }
