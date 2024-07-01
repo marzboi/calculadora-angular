@@ -10,10 +10,5 @@ import { ButtonComponent } from '../../components/button/button.component';
   styleUrl: './main-page.component.scss',
 })
 export class MainPageComponent {
-  displayValue = 100;
-
-  onButtonClick() {
-    this.displayValue = this.displayValue + 1;
-    console.log('Button clicked', this.displayValue);
-  }
+  displayValue = 0;
 }
