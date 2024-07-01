@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
 @Component({
   selector: 'cal-button',
@@ -9,4 +9,11 @@ import { Component, input } from '@angular/core';
 })
 export class ButtonComponent {
   buttonNumber = input.required<number>();
+
+  pressed = output<number>();
+
+  onClick() {
+    this.pressed.emit(this.buttonNumber());
+    console.log('Button pressed:', this.buttonNumber());
+  }
 }
