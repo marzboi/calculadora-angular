@@ -8,5 +8,5 @@ import { Component, input } from '@angular/core';
   styleUrl: './display.component.scss',
 })
 export class DisplayComponent {
-  currentValue = input.required<number>();
+  currentValue = input.required<number | string>();
 }
